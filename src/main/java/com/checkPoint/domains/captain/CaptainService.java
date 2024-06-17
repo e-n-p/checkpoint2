@@ -16,6 +16,8 @@ public class CaptainService extends AbstractService<Captain, Long> {
         Captain foundCap = getById(id);
         foundCap.setLicence(updateEntity.getLicence());
         foundCap.setExperience(updateEntity.getExperience());
+        foundCap.setName(updateEntity.getName());
+        foundCap.setBoat(updateEntity.getBoat());
 
         return this.repository.save(foundCap);
     }

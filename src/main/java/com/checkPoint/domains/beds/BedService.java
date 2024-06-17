@@ -18,6 +18,7 @@ public class BedService extends AbstractService<Bed, Long> {
         foundBed.setAge(updateEntity.getAge());
         foundBed.setLocation(updateEntity.getLocation());
         foundBed.setBasketCount(updateEntity.getBasketCount());
+        foundBed.setBoats(updateEntity.getBoats());
         return this.repository.save(foundBed);
     }
 }

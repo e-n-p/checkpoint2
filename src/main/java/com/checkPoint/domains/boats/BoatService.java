@@ -17,6 +17,10 @@ public class BoatService extends AbstractService<Boat, Long> {
         foundBoat.setName(updateEntity.getName());
         foundBoat.setCapacity(updateEntity.getCapacity());
         foundBoat.setModel(updateEntity.getModel());
+        foundBoat.setSpeed(updateEntity.getSpeed());
+        foundBoat.setBeds(updateEntity.getBeds());
+        foundBoat.setCaptain(updateEntity.getCaptain());
+
         return this.repository.save(foundBoat);
     }
 }

@@ -1,9 +1,8 @@
 package com.checkPoint.domains.captain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.checkPoint.domains.boats.Boat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +20,11 @@ public class Captain {
     private Long id;
 
     private String licence;
+    private String name;
     private int experience;
 
+    @OneToOne
+    @JsonIgnoreProperties("captain")
+    private Boat boat;
 
 }

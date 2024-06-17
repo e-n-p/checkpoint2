@@ -1,13 +1,16 @@
 package com.checkPoint.domains.boats;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.checkPoint.domains.beds.Bed;
+import com.checkPoint.domains.captain.Captain;
+import com.checkPoint.domains.huts.Hut;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Builder
@@ -23,5 +26,17 @@ public class Boat {
     private String name;
     private String model;
     private int capacity;
+    private int speed;
 
+    @OneToOne
+    @JsonIgnoreProperties("boat")
+    private Captain captain;
+
+    @ManyToOne
+    @JsonIgnoreProperties("boats")
+    private Hut hut;
+
+    @ManyToMany
+    @JsonIgnoreProperties("boats")
+    private List<Bed> beds;
 }

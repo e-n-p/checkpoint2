@@ -1,13 +1,14 @@
 package com.checkPoint.domains.beds;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.checkPoint.domains.boats.Boat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Builder
@@ -25,4 +26,7 @@ public class Bed {
     private int basketCount;
 
 
+    @ManyToMany
+    @JsonIgnoreProperties("beds")
+    private List<Boat> boats;
 }
