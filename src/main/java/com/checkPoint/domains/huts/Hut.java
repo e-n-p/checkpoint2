@@ -23,6 +23,7 @@ public class Hut {
 
     private String name;
     private float price;
+    private String location;
 
     @OneToMany
     @JsonIgnoreProperties("hut")

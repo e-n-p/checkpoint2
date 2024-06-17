@@ -17,6 +17,7 @@ public class HutService extends AbstractService<Hut, Long> {
         foundHut.setName(updateEntity.getName());
         foundHut.setPrice(updateEntity.getPrice());
         foundHut.setBoats(updateEntity.getBoats());
+        foundHut.setLocation(updateEntity.getLocation());
         return this.repository.save(foundHut);
     }
 }

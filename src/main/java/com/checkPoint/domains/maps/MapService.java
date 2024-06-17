@@ -1,7 +1,6 @@
 package com.checkPoint.domains.maps;
 
 import com.checkPoint.domains.AbstractService;
-import com.checkPoint.domains.beds.Bed;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 

@@ -20,6 +20,7 @@ public class Map {
     @Column(columnDefinition = "TEXT")
     private String map;
 
+    private String name;
     private int height;
     private int width;
 }
