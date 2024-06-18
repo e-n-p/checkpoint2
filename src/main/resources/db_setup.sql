@@ -1,5 +1,5 @@
 INSERT INTO captain (licence, name, experience, boat_id) values ("all", "BlackBeard", 2, null);
-INSERT INTO captain (licence, name, experience, boat_id) values ("small", "YellowBeard", 6, null);
+INSERT INTO captain (licence, name, experience, boat_id) values ("small", "Jean", 6, null);
 
 INSERT INTO hut (name, price, location) values ("Tasty Huitre", 6.55, "11,9");
 INSERT INTO hut (name, price, location) values ("shuck o'clock", 7.62, "24,11");
